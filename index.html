@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מבוא למערכות מידע וניהול נתונים</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- React & Babel CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --accent: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--secondary);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #1d4ed8);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      padding: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline {
+      border-right: 4px solid var(--primary);
+      padding-right: 30px;
+    }
+
+    .timeline-item {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      opacity: 0.8;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>מבוא למערכות מידע וניהול נתונים</h1>
+  <p>
+    קורס יסוד עדכני ומעשי להבנת עולם מערכות המידע, ניהול נתונים, טכנולוגיות ענן,
+    בינה מלאכותית וטרנספורמציה דיגיטלית בארגונים מודרניים.
+  </p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">אודות הקורס</a></li>
+    <li><a href="#topics">נושאים מרכזיים</a></li>
+    <li><a href="#trends">מגמות עדכניות</a></li>
+    <li><a href="#structure">מבנה הקורס</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2 class="section-title">אודות הקורס</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>מה נלמד?</h3>
+      <p>
+        הקורס מעניק הבנה רחבה של מערכות מידע ארגוניות, ניהול נתונים,
+        בסיסי נתונים, ותפקיד המידע בקבלת החלטות עסקיות.
+      </p>
+    </div>
+    <div class="card">
+      <h3>למי הקורס מיועד?</h3>
+      <p>
+        סטודנטים לניהול, מערכות מידע, מדעי המחשב ותחומים משיקים – ללא צורך
+        בידע מוקדם בתכנות.
+      </p>
+    </div>
+    <div class="card">
+      <h3>ערך מוסף</h3>
+      <p>
+        שילוב בין תיאוריה לפרקטיקה, דוגמאות מהעולם האמיתי,
+        וחשיפה לטכנולוגיות ולכלים בהם משתמשים ארגונים כיום.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="topics">
+  <h2 class="section-title">נושאים מרכזיים</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="badge">יסודות</span>
+      <h3>מערכות מידע ארגוניות</h3>
+      <p>ERP, CRM, SCM ותמיכתן בתהליכים עסקיים.</p>
+    </div>
+    <div class="card">
+      <span class="badge">נתונים</span>
+      <h3>ניהול בסיסי נתונים</h3>
+      <p>מודלים, SQL, איכות נתונים ואבטחת מידע.</p>
+    </div>
+    <div class="card">
+      <span class="badge">ניתוח</span>
+      <h3>Business Intelligence</h3>
+      <p>Dashboards, קבלת החלטות מונעת נתונים ו-KPIs.</p>
+    </div>
+    <div class="card">
+      <span class="badge">טכנולוגיה</span>
+      <h3>ענן ומערכות מודרניות</h3>
+      <p>SaaS, PaaS, IaaS וארכיטקטורות מתקדמות.</p>
+    </div>
+  </div>
+</section>
+
+<section id="trends">
+  <h2 class="section-title">מגמות עדכניות בתחום</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>בינה מלאכותית ו-ML</h3>
+      <p>
+        שימוש ב-AI לניתוח נתונים, אוטומציה, חיזוי וקבלת החלטות חכמות.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Big Data</h3>
+      <p>
+        עבודה עם כמויות מידע עצומות, כלים מבוזרים וניתוח בזמן אמת.
+      </p>
+    </div>
+    <div class="card">
+      <h3>אבטחת מידע ופרטיות</h3>
+      <p>
+        רגולציה, הגנת סייבר, ואתגרים בניהול מידע רגיש.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Low-Code / No-Code</h3>
+      <p>
+        פיתוח מערכות מידע ללא צורך בתכנות מורכב.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="structure">
+  <h2 class="section-title">מבנה הקורס</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>שלב 1: יסודות</h3>
+      <p>היכרות עם מערכות מידע, נתונים וארגונים.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>שלב 2: ניהול נתונים</h3>
+      <p>בסיסי נתונים, איכות מידע ו-Data Governance.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>שלב 3: מגמות מתקדמות</h3>
+      <p>AI, ענן, Big Data ומערכות חכמות.</p>
+    </div>
+  </div>
+
+  <div class="center" style="margin-top:50px;">
+    <button onclick="scrollToTop()">חזרה לראש העמוד</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 מבוא למערכות מידע וניהול נתונים | אתר קורס אקדמי</p>
+</footer>
+
+<script type="text/babel">
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
